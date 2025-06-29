@@ -126,7 +126,7 @@ const Hero = () => {
               <div className="relative w-80 h-96 lg:w-96 lg:h-[500px]">
                 {/* Using the uploaded image */}
                 <img
-                  src="https://i.imgur.com/fIV7pYc.png"
+                  src="https://i.imgur.com/fIV7pYc.png"//hdhdh
                   alt="Didula Wijesooriya - Computer Engineer"
                   className="w-full h-full object-cover object-center filter brightness-75 contrast-110"
                   onError={(e) => {
