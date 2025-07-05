@@ -200,11 +200,7 @@ const Hero = () => {
                 stiffness: 80,
                 damping: 18,
               }}
-              /*whileHover={{
-                rotate: [0, 3, -3, 0],
-                scale: 1.04,
-                transition: { duration: 0.8, repeat: Infinity, repeatType: "reverse" },
-              }}*/
+            
               className="relative"
             >
               <div className="relative w-80 h-96 lg:w-96 lg:h-[500px]">
