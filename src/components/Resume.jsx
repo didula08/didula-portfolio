@@ -86,7 +86,7 @@ const Resume = () => {
 
                 <div className="flex flex-col gap-3">
                   <a
-                    href="/didula_wijesuriya_cv.pdf"
+                    href="https://drive.google.com/uc?export=download&id=1AzfqSI7h_TcuvojJGzWyMEtg2CYiI9Ff"
                     download="Didula_Wijesuriya_CV.pdf"
                     className="group flex items-center justify-center gap-3 px-6 py-3 bg-cyan-500 hover:bg-cyan-600 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25"
                   >
@@ -95,7 +95,7 @@ const Resume = () => {
                   </a>
 
                   <a
-                    href="/didula_wijesuriya_cv.pdf"
+                    href="https://drive.google.com/file/d/1AzfqSI7h_TcuvojJGzWyMEtg2CYiI9Ff/view?usp=sharing"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="group flex items-center justify-center gap-3 px-6 py-3 border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900 font-semibold rounded-lg transition-all duration-300 transform hover:scale-105"
