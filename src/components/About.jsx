@@ -46,7 +46,7 @@ const About = () => {
               <p>
                 I'm a Computer Engineering undergraduate at University of Jaffna with a passion for 
                 creating innovative solutions that seamlessly integrate hardware and software. 
-                Currently pursuing my Diploma in Software Engineering at Esoft Metro Campus, 
+                I earned Diploma in Software Engineering at Esoft Metro Campus, 
                 I bring a comprehensive understanding of both theoretical concepts and practical applications.
               </p>
               

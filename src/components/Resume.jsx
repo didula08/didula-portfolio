@@ -2,32 +2,22 @@ import React from 'react';
 import { Download, Eye, Award, GraduationCap, Briefcase } from 'lucide-react';
 
 const Resume = () => {
-  const handleDownload = () => {
-    // In a real implementation, this would download the actual resume file
-    alert('Resume download would start here');
-  };
-
-  const handleView = () => {
-    // In a real implementation, this would open the resume in a new tab
-    alert('Resume preview would open here');
-  };
-
   const achievements = [
     {
       icon: <GraduationCap size={20} />,
-      title: "Computer Engineering Student",
-      description: "University of Jaffna - Strong foundation in engineering principles"
+      title: 'Computer Engineering Student',
+      description: 'University of Jaffna - Strong foundation in engineering principles',
     },
     {
       icon: <Award size={20} />,
-      title: "Software Engineering Diploma",
-      description: "Esoft Metro Campus - Specialized in modern software development"
+      title: 'Software Engineering Diploma',
+      description: 'Esoft Metro Campus - Specialized in modern software development',
     },
     {
       icon: <Briefcase size={20} />,
-      title: "Leadership Experience",
-      description: "Vice President, Rotaract Club University of Jaffna & IESL Member"
-    }
+      title: 'Leadership Experience',
+      description: 'Vice President, Rotaract Club University of Jaffna & IESL Member',
+    },
   ];
 
   return (
@@ -39,37 +29,30 @@ const Resume = () => {
           </h2>
           <div className="w-24 h-1 bg-cyan-400 mx-auto mb-6"></div>
           <p className="text-slate-300 text-lg max-w-2xl mx-auto">
-            Download my comprehensive resume to learn more about my education, experience, and achievements
+            Download my comprehensive resume to learn more about my education, experience, and achievements.
           </p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left side - Resume preview/info */}
+          {/* Left Side - Info */}
           <div className="space-y-8">
             <div className="bg-slate-950/50 rounded-2xl p-8 hover:bg-slate-950/70 transition-all duration-300">
-              <h3 className="text-2xl font-semibold text-slate-50 mb-6">
-                Professional Summary
-              </h3>
+              <h3 className="text-2xl font-semibold text-slate-50 mb-6">Professional Summary</h3>
               <p className="text-slate-300 leading-relaxed mb-6">
-                A dedicated Computer Engineering undergraduate from University of Jaffna with extensive 
-                experience in full-stack development, network engineering, AI/ML implementation, and IoT systems. 
-                Currently pursuing Diploma in Software Engineering at Esoft Metro Campus. Proven leadership 
-                as Vice President of Rotaract Club and active IESL member.
+                A dedicated Computer Engineering undergraduate from University of Jaffna with extensive experience in full-stack development, network engineering, AI/ML implementation, and IoT systems.
+                Currently pursuing Diploma in Software Engineering at Esoft Metro Campus. Proven leadership as Vice President of Rotaract Club and active IESL member.
               </p>
-              
+
               <div className="space-y-4">
-                {achievements.map((achievement, index) => (
-                  <div key={index} className="flex items-start gap-4 p-4 bg-slate-800/30 rounded-lg hover:bg-slate-800/50 transition-colors">
-                    <div className="text-cyan-400 mt-1">
-                      {achievement.icon}
-                    </div>
+                {achievements.map((item, index) => (
+                  <div
+                    key={index}
+                    className="flex items-start gap-4 p-4 bg-slate-800/30 rounded-lg hover:bg-slate-800/50 transition-colors"
+                  >
+                    <div className="text-cyan-400 mt-1">{item.icon}</div>
                     <div>
-                      <h4 className="font-semibold text-slate-50 mb-1">
-                        {achievement.title}
-                      </h4>
-                      <p className="text-slate-400 text-sm">
-                        {achievement.description}
-                      </p>
+                      <h4 className="font-semibold text-slate-50 mb-1">{item.title}</h4>
+                      <p className="text-slate-400 text-sm">{item.description}</p>
                     </div>
                   </div>
                 ))}
@@ -77,7 +60,7 @@ const Resume = () => {
             </div>
           </div>
 
-          {/* Right side - Download section */}
+          {/* Right Side - Actions */}
           <div className="flex justify-center">
             <div className="bg-slate-950/50 rounded-2xl p-8 w-full max-w-md hover:bg-slate-950/70 transition-all duration-300 transform hover:scale-105">
               {/* Resume preview mockup */}
@@ -99,42 +82,38 @@ const Resume = () => {
               </div>
 
               <div className="text-center space-y-4">
-                <h3 className="text-xl font-semibold text-slate-50 mb-4">
-                  Get My Resume
-                </h3>
-                
+                <h3 className="text-xl font-semibold text-slate-50 mb-4">Get My Resume</h3>
+
                 <div className="flex flex-col gap-3">
-                  <button
-                    onClick={handleDownload}
+                  <a
+                    href="/didula_wijesuriya_cv.pdf"
+                    download="Didula_Wijesuriya_CV.pdf"
                     className="group flex items-center justify-center gap-3 px-6 py-3 bg-cyan-500 hover:bg-cyan-600 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25"
                   >
                     <Download size={20} className="group-hover:animate-bounce" />
                     Download PDF
-                  </button>
-                  
-                  <button
-                    onClick={handleView}
+                  </a>
+
+                  <a
+                    href="/didula_wijesuriya_cv.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="group flex items-center justify-center gap-3 px-6 py-3 border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900 font-semibold rounded-lg transition-all duration-300 transform hover:scale-105"
                   >
                     <Eye size={20} className="group-hover:scale-110 transition-transform" />
                     Quick View
-                  </button>
+                  </a>
                 </div>
 
-                <p className="text-slate-400 text-sm mt-4">
-                  Last updated: December 2024
-                </p>
+                <p className="text-slate-400 text-sm mt-4">Last updated: December 2024</p>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Education & Experience summary */}
+        {/* Education & Experience Summary */}
         <div className="mt-16 bg-slate-950/30 rounded-2xl p-8">
-          <h3 className="text-2xl font-semibold text-slate-50 mb-8 text-center">
-            Education & Experience
-          </h3>
-          
+          <h3 className="text-2xl font-semibold text-slate-50 mb-8 text-center">Education & Experience</h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
             <div className="space-y-2">
               <div className="text-3xl font-bold text-cyan-400">University</div>
