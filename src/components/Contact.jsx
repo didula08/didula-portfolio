@@ -1,5 +1,12 @@
 import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Send, Github, Linkedin, Twitter } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, Github, Linkedin } from 'lucide-react';
+import emailjs from '@emailjs/browser';
+
+// === REPLACE THESE with your EmailJS credentials ===
+const SERVICE_ID = import.meta.env.VITE_SERVICE_ID;
+const TEMPLATE_ID = import.meta.env.VITE_TEMPLATE_ID;
+const PUBLIC_KEY = import.meta.env.VITE_PUBLIC_KEY;
+// =======================================
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -21,13 +28,26 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Simulate form submission
-    setTimeout(() => {
+
+    emailjs.send(
+      SERVICE_ID,
+      TEMPLATE_ID,
+      {
+        from_name: formData.name,
+        from_email: formData.email,
+        subject: formData.subject,
+        message: formData.message
+      },
+      PUBLIC_KEY
+    )
+    .then(() => {
       alert('Thank you for your message! I will get back to you soon.');
       setFormData({ name: '', email: '', subject: '', message: '' });
       setIsSubmitting(false);
-    }, 1500);
+    }, (error) => {
+      alert('Something went wrong. Please try again.');
+      setIsSubmitting(false);
+    });
   };
 
   const contactInfo = [
